@@ -6,19 +6,19 @@ class Product extends React.Component {
     CheckStock() {
         if (this.props.pData.productStock) {
             return (
-                <button>Add To Cart</button>
+                <button className="btn btn-sm btn-primary" onClick={() => this.props.btnClick()}>Add To Cart</button>
             );
         }
         return (
-            <p>Out Of Stock</p>
+            <p className="alert alert-danger">Out Of Stock</p>
         );
     }
     render() {
         const { pData, curCode } = this.props;
         return (
             <ErrorBoundary>
-                <Card>
-                    <img src={pData.productImage} />
+                <Card size={3}>
+                    <img className="img-thumbnail" src={pData.productImage} />
                     <h4>{pData.productName}</h4>
                     <h5>{curCode} {pData.productPrice}</h5>
                     {this.CheckStock()}

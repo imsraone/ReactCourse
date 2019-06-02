@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Demo from './demo'
-import ProductList from './Containers/ProductList';
 import Currency from './Components/Currency';
 import { environment } from './Config/env.dev';
-import Checkout from './Components/Checkout'
+import AppRouter from './routes';
+import Header from './ui/components/Header';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class App extends React.Component {
   state = {
@@ -15,12 +15,14 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App" >
-        {/* <Demo></Demo> */}
-        {<Checkout />}
-        < Currency changeCurrency={(code) => this.UpdateCurrency(code)} />
-        <ProductList curCode={this.state.curretnCurrency} />
-      </div>
+      <Router className="App">
+        <Header>
+          <Currency changeCurrency={(code) => this.UpdateCurrency(code)} />
+        </Header>
+        <div className="mainContent">
+          <AppRouter />
+        </div>
+      </Router>
     );
   }
 }

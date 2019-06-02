@@ -1,0 +1,22 @@
+[
+    {
+        "menuText": "Home",
+        "menuLink": "/"
+    },
+    {
+        "menuText": "Products",
+        "menuLink": "/products"
+    },
+    {
+        "menuText": "CheckOut",
+        "menuLink": "/checkout/121?id=10&name=test"
+    },
+    {
+        "menuText": "CheckOut 2",
+        "menuLink": "/checkout/121?id=10&name=sravan"
+    },
+    {
+        "menuText": "Cart",
+        "menuLink": "/cart"
+    }
+]
