@@ -1,1 +1,1 @@
-test git hook check
+test git hook check test
